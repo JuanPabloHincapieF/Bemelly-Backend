@@ -30,4 +30,9 @@ const modifyUser = async (req, res) => {
   res.send("el usuario ha sido modificado");
 };
 
-module.exports = { getUsers, newUser, modifyUser };
+const deleteUser = async (req, res) => {
+  const user = req.body;
+  await User.findOneAndDelete({ CC: user.CC });
+  res.send("se ha eliminado el usuario correctamente");
+};
+module.exports = { getUsers, newUser, modifyUser, deleteUser };

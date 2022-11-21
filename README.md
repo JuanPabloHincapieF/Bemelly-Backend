@@ -11,6 +11,7 @@ En este repositorio se encuentra la parte del backend de la app
 | `/api/users/getUsers`   |   `GET`   | Muestra todos los usuarios |
 | `/api/users/newUser`    |  `POST`   | Crea un usuario            |
 | `/api/users/modifyUser` |   `PUT`   | Modificar a un usuario     |
+| `/api/users/deleteUser` | `DELETE`  | Eliminar a un usuario      |
 
 `getUsers` No es necesario nada mas que la ruta y el verbo
 
@@ -33,5 +34,13 @@ En este repositorio se encuentra la parte del backend de la app
     "name": "Juan",
     "email": "example@email.com",
     "role": "client"
+}
+```
+
+`deleteUser` El dato que se necesita para eliminar un usuario es el CC :
+
+```JSON
+{
+    "CC": 1234
 }
 ```
