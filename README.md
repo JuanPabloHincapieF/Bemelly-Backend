@@ -44,3 +44,47 @@ En este repositorio se encuentra la parte del backend de la app
     "CC": 1234
 }
 ```
+
+### AUTH USERS
+
+| Route             | HTTP Verb | Description |
+| :---------------- | :-------: | :---------- |
+| `/api/auth/login` |  `POST`   | login       |
+
+`Login` Los datos que se necesitan para un login son:
+
+```JSON
+{
+  "email":"prueba@correo.com",
+  "password":"1234"
+}
+```
+
+### PUBLICATION USERS
+
+| Route                             | HTTP Verb | Description                |
+| :-------------------------------- | :-------: | :------------------------- |
+| `/api/publication/newPublication` |  `POST`   | Crear una publicacion      |
+| `/api/users/deleteUser`           | `DELETE`  | Eliminar a una publicacion |
+
+`newPublication` Se necesita enviar en este formato :
+
+```JSON
+{
+  {
+  "ownerCC":123456789,
+  "serviceName":"prueba@correo.com",
+  "description":"1233",
+  "price":123
+}
+}
+```
+
+`deleteUser` El dato que se necesita para eliminar una publication es el id y CC del creador:
+
+```JSON
+{
+    "id": 1,
+    "ownerCC":123456789
+}
+```

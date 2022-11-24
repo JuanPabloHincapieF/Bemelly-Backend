@@ -6,6 +6,6 @@ const {
 } = require("../controllers/publication.controller");
 
 router.post("/newPublication", newPublication);
-router.delete("/newPublication", deletePublication);
+router.delete("/deletePublication", deletePublication);
 
 module.exports = router;

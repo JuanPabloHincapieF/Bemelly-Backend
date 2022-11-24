@@ -6,8 +6,8 @@ const publicationSchema = new Schema({
     required: true,
     unique: true,
   },
-  ownerData: {
-    type: Object,
+  ownerCC: {
+    type: Number,
     required: true,
   },
   serviceName: {
@@ -26,10 +26,12 @@ const publicationSchema = new Schema({
 
   reviewsScores: {
     type: Number,
+    default: 0,
   },
 
   reviews: {
     type: Array,
+    default: [],
   },
 });
 
