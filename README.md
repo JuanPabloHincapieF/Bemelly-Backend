@@ -71,12 +71,10 @@ En este repositorio se encuentra la parte del backend de la app
 
 ```JSON
 {
-  {
   "ownerCC":123456789,
-  "serviceName":"prueba@correo.com",
-  "description":"1233",
+  "serviceName":"our service",
+  "description":"description of our service",
   "price":123
-}
 }
 ```
 
