@@ -79,7 +79,7 @@ En este repositorio se encuentra la parte del backend de la app
 }
 ```
 
-`deleteUser` El dato que se necesita para eliminar una publicacion es el id y CC del creador:
+`deletePublication` El dato que se necesita para eliminar una publicacion es el id y CC del creador:
 
 ```JSON
 {
@@ -93,8 +93,8 @@ En este repositorio se encuentra la parte del backend de la app
 ```JSON
 {
   "id":23,
-  "serviceName":"modified service",
-  "description":"description of our modified service",
-  "price":456
+  "serviceName":"modified service", //opcional
+  "description":"description of our modified service",  //opcional
+  "price":456   //opcional
 }
 ```
