@@ -45,7 +45,7 @@ En este repositorio se encuentra la parte del backend de la app
 }
 ```
 
-### AUTH USERS
+### API AUTH
 
 | Route             | HTTP Verb | Description |
 | :---------------- | :-------: | :---------- |
@@ -60,7 +60,7 @@ En este repositorio se encuentra la parte del backend de la app
 }
 ```
 
-### PUBLICATION USERS
+### API PUBLICATION
 
 | Route                             | HTTP Verb | Description                |
 | :-------------------------------- | :-------: | :------------------------- |
