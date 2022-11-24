@@ -62,10 +62,11 @@ En este repositorio se encuentra la parte del backend de la app
 
 ### API PUBLICATION
 
-| Route                             | HTTP Verb | Description                |
-| :-------------------------------- | :-------: | :------------------------- |
-| `/api/publication/newPublication` |  `POST`   | Crear una publicacion      |
-| `/api/users/deleteUser`           | `DELETE`  | Eliminar a una publicacion |
+| Route                             | HTTP Verb | Description               |
+| :-------------------------------- | :-------: | :------------------------ |
+| `/api/publication/newPublication` |  `POST`   | Crear una publicacion     |
+| `/api/users/deletePublication`    | `DELETE`  | Eliminar una publicacion  |
+| `/api/users/modifyPublication`    |   `PUT`   | Modificar una publicacion |
 
 `newPublication` Se necesita enviar en este formato :
 
@@ -78,11 +79,22 @@ En este repositorio se encuentra la parte del backend de la app
 }
 ```
 
-`deleteUser` El dato que se necesita para eliminar una publication es el id y CC del creador:
+`deleteUser` El dato que se necesita para eliminar una publicacion es el id y CC del creador:
 
 ```JSON
 {
     "id": 1,
     "ownerCC":123456789
+}
+```
+
+`modifyPublication` Se necesita enviar en este formato :
+
+```JSON
+{
+  "id":23,
+  "serviceName":"modified service",
+  "description":"description of our modified service",
+  "price":456
 }
 ```

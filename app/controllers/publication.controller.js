@@ -25,6 +25,23 @@ const deletePublication = async (req, res) => {
   }
 };
 
+const modifyPublication = async (req, res) => {
+  const publication = req.body;
+  await Publication.findOneAndUpdate(
+    { id: publication.id },
+    { serviceName: publication.serviceName }
+  );
+  await Publication.findOneAndUpdate(
+    { id: publication.id },
+    { description: publication.description }
+  );
+  await Publication.findOneAndUpdate(
+    { id: publication.id },
+    { price: publication.price }
+  );
+  res.send("la publicacion ha sido modificada");
+};
+
 const publicationCounter = async () => {
   let contador = await Counter.findOne({ id: "publicationCounter" });
   newValue = contador.seq_value + 1;
@@ -37,4 +54,5 @@ const publicationCounter = async () => {
 module.exports = {
   newPublication,
   deletePublication,
+  modifyPublication,
 };
