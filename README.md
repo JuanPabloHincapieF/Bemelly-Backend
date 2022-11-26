@@ -103,6 +103,6 @@ En este repositorio se encuentra la parte del backend de la app
   "serviceName":"modified service", //opcional
   "description":"description of our modified service",  //opcional
   "price":456,   //opcional
-  "tags": ["tag1", "tag2"]
+  "tags": ["tag1", "tag2"] // opcional
 }
 ```
