@@ -1,6 +1,15 @@
 const Publication = require("../models/publication.model");
 const Counter = require("../models/counter.model");
 
+const getPublications = async (req, res) => {
+  const result = await Publication.find();
+  res.status(200).send(result);
+};
+const getUserPublications = async (req, res) => {
+  const user = req.params.CC;
+  const result = await Publication.find({ ownerCC: user });
+  res.status(200).send(result);
+};
 const newPublication = async (req, res) => {
   try {
     let publication = req.body;
@@ -39,6 +48,10 @@ const modifyPublication = async (req, res) => {
     { id: publication.id },
     { price: publication.price }
   );
+  await Publication.findOneAndUpdate(
+    { id: publication.id },
+    { tags: publication.tags }
+  );
   res.send("la publicacion ha sido modificada");
 };
 
@@ -55,4 +68,6 @@ module.exports = {
   newPublication,
   deletePublication,
   modifyPublication,
+  getPublications,
+  getUserPublications,
 };

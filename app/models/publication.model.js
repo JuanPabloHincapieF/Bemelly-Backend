@@ -18,6 +18,10 @@ const publicationSchema = new Schema({
   description: {
     type: String,
   },
+  tags: {
+    type: Array,
+    default: [],
+  },
 
   price: {
     type: Number,

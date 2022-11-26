@@ -62,11 +62,17 @@ En este repositorio se encuentra la parte del backend de la app
 
 ### API PUBLICATION
 
-| Route                             | HTTP Verb | Description               |
-| :-------------------------------- | :-------: | :------------------------ |
-| `/api/publication/newPublication` |  `POST`   | Crear una publicacion     |
-| `/api/users/deletePublication`    | `DELETE`  | Eliminar una publicacion  |
-| `/api/users/modifyPublication`    |   `PUT`   | Modificar una publicacion |
+| Route                                      | HTTP Verb | Description                             |
+| :----------------------------------------- | :-------: | :-------------------------------------- |
+| `/api/publication/getPublications`         |   `GET`   | Muestra todas las publicaciones         |
+| `/api/publication/getUserPublications/:CC` |   `GET`   | Muestra las publicaciones de un usuario |
+| `/api/publication/newPublication`          |  `POST`   | Crear una publicacion                   |
+| `/api/users/deletePublication`             | `DELETE`  | Eliminar una publicacion                |
+| `/api/users/modifyPublication`             |   `PUT`   | Modificar una publicacion               |
+
+`getPublications` No es necesario nada mas que la ruta y el verbo
+
+`getUserPublications/:CC` se debe enviar un la url con el CC del dueño de las publicaciones que se quieren mostrar
 
 `newPublication` Se necesita enviar en este formato :
 
@@ -75,7 +81,8 @@ En este repositorio se encuentra la parte del backend de la app
   "ownerCC":123456789,
   "serviceName":"our service",
   "description":"description of our service",
-  "price":123
+  "price":123,
+  "tags": ["tag1", "tag2"]
 }
 ```
 
@@ -95,6 +102,7 @@ En este repositorio se encuentra la parte del backend de la app
   "id":23,
   "serviceName":"modified service", //opcional
   "description":"description of our modified service",  //opcional
-  "price":456   //opcional
+  "price":456,   //opcional
+  "tags": ["tag1", "tag2"]
 }
 ```
